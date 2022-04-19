@@ -3,15 +3,15 @@
 
 int main(void)
 {
-    char c = get_string("Do you agree?");
+    char c = get_string("Do you agree? ");
 
     // check whether user agreed
-    if (c == 'y')
+    if (c == 'y' || 'Y')
     {
         printf("Agreed.\n");
 
     }
-    else if (c == 'n')
+    else if (c == 'n' || 'N')
     {
         printf("Not agreed.\n");
     }
