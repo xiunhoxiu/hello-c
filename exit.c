@@ -11,17 +11,17 @@ int main(int argc, string argv[])
     }
 
     printf("hello, %s\n", argv[1]);
-    
+    return 0;
+
     /* else
     {
         printf("hello, %s", argv[1]);
         return 0; 
 
-        // return 0:
-           signals the computer that all is well. However, there is no need to use ELSE bc. 
+        // return 0: signals the computer that all is well. However, 
+            there is no need to use ELSE bc. 
            we already returned 1. And we dont need to return 0 either bc. the computer automatically returns 0.
-        
-        //dont need else bc. we already returned 1 in
+           However it is good practice to return them explicitly for own understanding- 
     } 
     */
 
