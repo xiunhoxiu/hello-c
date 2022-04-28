@@ -4,6 +4,13 @@
 
 int main(int argc, string argv[])
 {
-    
-    printf("hello, %s\n", argv[1]); //The second index bc. it literally prints out everything the human writes (incl. running the script command ./argv )
+    if (argc == 2) // error handling
+    {
+        printf("hello, %s\n", argv[1]);
+    }
+    else
+    {
+        printf("hello, world\n");
+    }
+
 }
