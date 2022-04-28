@@ -18,5 +18,4 @@ int main(void)
     printf("%i %i %i\n", s[0], s[1], s[2]); // a string is an array of chars.
     printf("%s\n", s);
     printf("%s\n", t);
-
  }
