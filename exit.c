@@ -21,7 +21,7 @@ int main(int argc, string argv[])
         // return 0: signals the computer that all is well. However, 
             there is no need to use ELSE bc. 
            we already returned 1. And we dont need to return 0 either bc. the computer automatically returns 0.
-           However it is good practice to return them explicitly for own understanding- 
+           However it is good practice to return them explicitly for own understanding -
     } 
     */
 
