@@ -21,3 +21,14 @@ void draw(int n)
         printf("\n");
     }
 }
+
+/* 
+recursive structere as it is defined in terms of itself.
+Q: Describe what does a pyramid of height 4 look like?
+A: A pyramid of height 3 plus one more row
+Q: Describe what does a pyramid of height 3 look like?
+A: A pyramid of height 3 plus one more row.
+And so forth and it gets smaller until "what does a pyramid of no height look like"?
+A: Things get negative. You would just stop the loop. - base case with no pyramid.
+==> go to recursion.c
+*/
