@@ -9,6 +9,9 @@ int main (void)
     {
         printf("%i\n", scores[i]);
     }
-    /* this works (compiles and runs) but theres a logical bug - scores are not initalized. 
-    computer don't mind but and output garbage values.*/ 
+    /* 
+    this works (compiles and runs) but theres a logical bug - scores are not initalized. 
+    it output garbage values.
+    don't ever forget to initialize bc. that can be very dangerous
+    */ 
 }
