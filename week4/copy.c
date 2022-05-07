@@ -8,7 +8,7 @@ int main (void)
 {
     char *s = get_string("s: ");
     char *t = malloc(strlen(s+1)); // + 1 for the addition null character.
-    if (t == NULL)
+    if (t == NULL) // NUL = /0, and NULL in context of a pointer.
     {
         return 1; // if there is a problem
     }
@@ -17,7 +17,7 @@ int main (void)
 
     if(strlen(t) > 0) // what if there's no /0?
     {
-         t[0] = toupper(t[0]); //risky.
+         t[0] = toupper(t[0]); //risky on its own without the condition.
     }
 
     printf("s: %s\n", s);
