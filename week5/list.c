@@ -36,6 +36,6 @@ int main (void)
     {
         printf("%i\n", list[i]); 
     }
-    free(list); // free the new list at the end. All heap blocks where freed -- no leaks are possible.
+    free(list); // free the new list at the end. All heap blocks were freed -- no leaks are possible.
     return 0; 
 }
