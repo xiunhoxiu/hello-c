@@ -15,7 +15,7 @@ int main (void)
 
     // Time passes
 
-    int *tmp = malloc(4*sizeof(int)); // temporary allocate memory of size 4
+    int *tmp = malloc(4*sizeof(int)); 
     if(tmp == NULL)
     {
         free(list);
@@ -24,17 +24,18 @@ int main (void)
 
     for (int i = 0; i < 3; i ++)
     {
-        tmp[i] = list[i]; // copy from list to tempory list
+        tmp[i] = list[i]; 
     }
-    tmp[3] = 4; // hardcoding - add new number at the end of the new list.
+    tmp[3] = 4; 
 
     free(list); // free the old list of memory and then change it's value!
 
-    list = tmp; // remember in the list variable what the addresses of this new chunk of memory.
+    list = tmp; 
 
     for( int i = 0; i < 4; i++)
     {
-        printf("%i\n", list[i]); // print all values out.
+        printf("%i\n", list[i]); 
     }
-    return 0; // signify success.
+    free(list); // free the new list at the end. All heap blocks where freed -- no leaks are possible.
+    return 0; 
 }
