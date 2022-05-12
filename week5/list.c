@@ -9,12 +9,14 @@ int main (void)
         return 1;
     }
 
+    // Assign three numbers to that array
     list[0] = 1;
     list[1] = 2;
     list[2] = 3;
 
     // Time passes
 
+    // Allocate new array of size 4
     int *tmp = malloc(4*sizeof(int)); 
     if(tmp == NULL)
     {
@@ -22,20 +24,27 @@ int main (void)
         return 1;
     }
 
+    // Copy numbers from old array into new array
     for (int i = 0; i < 3; i ++)
     {
         tmp[i] = list[i]; 
     }
+    // Add fourth number to new array
     tmp[3] = 4; 
 
-    free(list); // free the old list of memory and then change it's value!
+    // free old array - "list of memory (address)" and then change it's value!
+    free(list); 
 
+    // Remember new array
     list = tmp; 
 
+    // print new array
     for( int i = 0; i < 4; i++)
     {
         printf("%i\n", list[i]); 
     }
-    free(list); // free the new list at the end. All heap blocks were freed -- no leaks are possible.
+
+    // free the new array/list at the end. All heap blocks were freed -- no leaks are possible.
+    free(list); 
     return 0; 
 }
