@@ -43,7 +43,7 @@ int main(void)
     n->right = NULL;
     tree->left = n; /* initalize the tree left child to be n. 
                         Want 1 to be the new left child
-                        Sticting togther with a pointer from 2 to 1.*/
+                        Stitching togther with a pointer from 2 to 1.*/
 
 
     // Add number to list
