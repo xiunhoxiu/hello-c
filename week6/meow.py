@@ -9,11 +9,11 @@ for i in range(3):
 
 # improve further
 def main():
-    for i in range(3):
-        meow()  
+        meow(3)  
 
-def meow():
-    print("meow")
+def meow(n):
+    for i in range(n):
+        print("meow")
 
-if __name__=="__main__":
-main()
+if __name__== "__main__":
+    main()
