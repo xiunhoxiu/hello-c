@@ -1,5 +1,15 @@
-import cs50
+try:
+    x = int(input("x: "))
+except:
+    print("That is not an int!")
+    exit()
 
-x = cs50.get_int("x: ")
-y = cs50.get_int("y; ")
+try:
+     y = int(input("y; "))
+except:
+    print("That is not an int!")
+    exit()
+
 print(x + y)
+
+""" The CS50 library is doing that try and except """
