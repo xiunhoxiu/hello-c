@@ -1,18 +1,16 @@
-def main():
-    height = get_height()
-    for i in range(height):
-        print("#")
+for i in range(4):
+    print("?", end="!!!!")  # print() takes other argumentes.
+print()
 
+# 4 question markes on a line
+print("?" * 4)
 
-def get_height():
-    while True:
-        try:
-            n = int(input("Height: "))
-            
-            if n > 0: 
-                return n
-                
-        except ValueError:
-            print("That's not a integer!")
+# 3x3 bricks
+for i in range(3):
+    for j in range(3):
+        print("#", end="")
+    print()
 
-main()
+# 3x3 bricks - another trick
+for i in range(3):
+    print("#" * 3)
