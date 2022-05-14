@@ -1,15 +1,8 @@
-try:
-    x = int(input("x: "))
-except:
-    print("That is not an int!")
-    exit()
+from cs50 import get_int
 
-try:
-     y = int(input("y; "))
-except:
-    print("That is not an int!")
-    exit()
+x = get_int("x: ")
+y = get_int("y: ")
 
-print(x + y)
+z = x / y 
 
-""" The CS50 library is doing that try and except """
+print(f"{z:.50f}") ## floating point imprecision
