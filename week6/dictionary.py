@@ -15,7 +15,7 @@ def load(dictionary):
     return True
 
 def size():
-    retun len(words)
+    return len(words)
 
 def unload():  
     return True
