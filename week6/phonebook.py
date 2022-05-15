@@ -1,14 +1,13 @@
+import csv
 from cs50 import get_string
 
-""" {} dictonary
-    keys and values 
-"""
 
-people = {
-    "Carter": "+1-617-495-1000",
-    "David": "+1-949-468-2750"
-}
+file = open("phonebook.csv", "a")  # "a" - append format, adds to the bottom.
 
 name = get_string("Name: ")
-if name in people:
-    print(f"Number: {people[name]}")  # index into a dictionary using []
+number = get_string("Number: ")
+
+writer = csv.writer(file)
+writer.writerow([name, number])
+
+file.close()
