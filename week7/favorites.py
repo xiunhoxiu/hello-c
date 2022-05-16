@@ -1,8 +1,12 @@
 import csv
   
+titles = set()
 
 with open("favorites.csv", "r") as file:
-	reader = csv.DictReader(file)
-	for row in reader:
-		print(row["title"])
+    reader = csv.DictReader(file)
+    for row in reader:
+        title = row["title"].strip().lower()
+        titles.add(title)
 
+for title in sorted(titles):
+    print(title)
