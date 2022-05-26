@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, redirect, render_template, request
 
 app = Flask(__name__)
 
@@ -31,14 +31,16 @@ def register():
     sport = request.form.get("sport")
     if not sport:
         return render_template("error.html", message="Missing sport")
-    if sport in SPORTS:
+    if sport not in SPORTS:
         return render_template("error.html", message="Invalid sport")
 
     # Registrant
     REGISTRANTS[name] = sport
 
     # Confirm registration
-    return render_template("success.html")
+    # return render_template("success.html")
+    return redirect("/registrants")
+
 
 @app.route("/registrants")
 def registrants():
