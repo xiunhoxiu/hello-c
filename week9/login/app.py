@@ -16,4 +16,16 @@ def index():
         return redirect("/login")
     return render_template("index.html")
 
+
 @app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        session["name"] = request.form.get("name")
+        return redirect("/")
+    return render_template("login.html")
+
+
+@app.route("/logout")
+def logout():
+    session["name"] = None
+    return redirect("/")
