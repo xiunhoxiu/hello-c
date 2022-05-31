@@ -3,6 +3,7 @@
 
 int main(void)
 {
+    //for debugging example
     int number = 5;
     int guess = get_int("What's your guess? ");
 
