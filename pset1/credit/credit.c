@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 
 int main(void) 
@@ -7,7 +8,7 @@ int main(void)
     long credit_card_number;
     do
     {
-        credit_card_number = get_long("Enter credit card number: ");
+        credit_card_number = get_long("Enter credit card number w/o hyphens: ");
         // get_long() rejects hyphens
 
     }while(credit_card_number < 0); 
