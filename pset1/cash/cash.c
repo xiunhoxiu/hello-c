@@ -37,7 +37,7 @@ int main(void)
 
 int get_cents(void)
 {
-    get_string("How much do you owe your costumer? ");
+    get_string("How much do you owe your customer? ");
     return 0;
 }
 
