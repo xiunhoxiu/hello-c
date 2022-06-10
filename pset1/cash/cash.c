@@ -15,52 +15,85 @@ int main(void)
     // Calculate the number of quarters to give the customer
     int quarters = calculate_quarters(cents);
     cents = cents - quarters * 25;
+     printf("quarters: %i\n", quarters);
 
     // Calculate the number of dimes to give the customer
     int dimes = calculate_dimes(cents);
     cents = cents - dimes * 10;
+    printf("dimes: %i\n", dimes);
 
     // Calculate the number of nickels to give the customer
     int nickels = calculate_nickels(cents);
     cents = cents - nickels * 5;
+    printf("nickels: %i\n", nickels);
 
     // Calculate the number of pennies to give the customer
     int pennies = calculate_pennies(cents);
     cents = cents - pennies * 1;
+    printf("pennies: %i\n", pennies);
 
     // Sum coins
     int coins = quarters + dimes + nickels + pennies;
 
     // Print total number of coins to give the customer
-    printf("%i\n", coins);
+    printf("Total number of coins to give the customer: %i\n", coins);
 }
 
 int get_cents(void)
 {
-    get_string("How much do you owe your customer? ");
-    return 0;
+    int answer;
+    do
+    {
+        answer = get_int("How many cents do you owe the customer? "); 
+    
+    }while(answer < 0);
+    
+    return answer;
+    
 }
 
 int calculate_quarters(int cents)
 {
-    // TODO
-    return 0;
+    int count = 0;
+    while(cents >= 25)
+    {
+        count++;
+        cents -= 25;
+    }
+
+    return count;
 }
 
 int calculate_dimes(int cents)
 {
-    // TODO
-    return 0;
+    int count = 0;
+    while(cents >=10)
+    {
+        count++;
+        cents -= 10;
+    }
+
+    return count;
 }
 
 int calculate_nickels(int cents)
 {
-    // TODO
-    return 0;
+    int count = 0;
+    while(cents >= 5)
+    {
+        count++;
+        cents -= 5;
+    }
+    return count;
 }
 
 int calculate_pennies(int cents)
 {
-    // TODO
-    return 0;
+    int count = 0;
+    while(cents >= 1)
+    {
+        count++;
+        cents -= 1;
+    }
+    return count;
 }
